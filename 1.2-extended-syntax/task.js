@@ -21,18 +21,12 @@ function getAverageMark(marks){
         return 0;
     } else if (marks.length > 5) {
         console.log('Введено оценок больше пяти');
-        let temp =marks.slice(0 , 5);
-        for (let i = 0; i < temp.length ; i++) {
-            sum += temp[i];
-        }
-        return (sum / temp.length);
-    } else {
-        for (let i = 0; i < marks.length ; i++) {
-            sum += marks[i];
-        }
-        return (sum / marks.length);
+        marks = marks.slice(0 , 5);
     }
-
+    for (let i = 0; i < marks.length ; i++) {
+        sum += marks[i];
+    }
+    return (sum / marks.length);
 }
 
 function askDrink(name,dateOfBirthday){
