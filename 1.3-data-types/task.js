@@ -29,6 +29,12 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
 }
 
 function getGreeting(name) {
-    // код для задачи №2 писать здесь
-    // return greeting;
+    if ( typeof(name) == "string" && name.length > 0) {
+        console.log(`Привет, мир! Меня зовут ${name}`)
+        return (`Привет, мир! Меня зовут ${name}`);
+    } else {
+        console.log(`Привет, мир! Меня зовут Аноним`)
+        return (`Привет, мир! Меня зовут Аноним`);
+    }
+
 }
