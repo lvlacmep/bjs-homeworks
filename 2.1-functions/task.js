@@ -13,7 +13,7 @@ function getSolutions( a, b, c ) {
     return {D, roots: [x1, x2]};
 }
 function showSolutionsMessage( a, b, c ) {
-    result = getSolutions( a, b, c );
+    const result = getSolutions( a, b, c );
     console.log(`Вычисляем корни квадратного уравнения ${a}x² + ${b}x + ${c}`);
     console.log(`Значение дискриминанта: ${result.D}`);
     if (result.D < 0) {
