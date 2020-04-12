@@ -21,7 +21,7 @@ function checkBirthday(birthday) {
     const date = new Date(birthday);
     birthday = +date;
     const diff = now - birthday;
-    const age = diff / ( 1000 * 60 * 60 * 24 * 365);
+    const age = diff / ( 1000 * 60 * 60 * 24 * 365.25);
     if (age >= 18) return true;
     else return false;
 
