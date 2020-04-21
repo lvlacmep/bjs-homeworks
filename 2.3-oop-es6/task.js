@@ -158,7 +158,7 @@ class StudentLog {
                 this.subjects[subject] = [];
                 this.subjects[subject].push(grade);               
             }
-        }
+        }        
         if (this.subjects[subject]) {
             return this.subjects[subject].length;
         } else return 0;        
@@ -175,16 +175,15 @@ class StudentLog {
         } else return 0;       
     }
     
-    getTotalAverage() {        
+    getTotalAverage() {
+        this.grades = [];
         for (let key in this.subjects) {
             this.getAverageBySubject(key);
-        }
+        }        
         let sum = 0;
-        console.log(this.grades);
         for (let i = 0; i < this.grades.length; i++) {
             sum += this.grades[i];
         }
-        console.log(sum / this.grades.length)
         return sum / this.grades.length;
     }
 }
